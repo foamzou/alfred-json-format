@@ -1,6 +1,6 @@
 <?php
 
-$input = exec('pbpaste');
+$input = shell_exec('pbpaste');
 
 function _format_json($json, $html = false) {
 		$tabcount = 0; 
@@ -71,8 +71,6 @@ $style = "<style> textarea {
 
 $script = "<script>
 var element = document.getElementById('t');
-	console.log('dddd')
-	console.log(element.scrollHeight)
     element.style.height = '5px';
     element.style.height = (element.scrollHeight)+'px';
 
